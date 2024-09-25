@@ -1,0 +1,38 @@
+Smart Stick for the Blind
+Overview
+The Smart Stick is an assistive device designed to help visually impaired individuals navigate their surroundings safely. Using ultrasonic sensors, the device detects obstacles and provides feedback through vibrations and sound, enabling users to walk confidently.
+
+Features
+Obstacle Detection: Utilizes ultrasonic sensors to measure the distance to nearby objects.
+Feedback Mechanisms: Incorporates buzzers and LEDs to alert users of obstacles at varying distances.
+User-Friendly: Simple setup and operation, making it accessible for individuals with visual impairments.
+Hardware Components
+Arduino UNO - The main microcontroller for processing data and controlling outputs.
+Ultrasonic Sensor (HC-SR04) - Measures the distance to obstacles.
+Buzzers - Provide audio feedback to the user (active and passive).
+LED - Provides visual feedback through vibrations.
+Components List
+Component	Quantity
+Arduino UNO	1
+Solderless Breadboard Full Size	1
+Ultrasonic Sensor - HC-SR04 (Generic)	1
+Buzzer (active)	1
+Buzzer (passive)	1
+LED (generic)	1
+Pin Configuration
+trigPin (Pin 9): Trigger pin for the ultrasonic sensor.
+echoPin (Pin 8): Echo pin for the ultrasonic sensor.
+Buzzer1 (Pin 5): Active buzzer for close proximity alerts.
+Buzzer2 (Pin 7): Passive buzzer for further alerts.
+Led1 (Pin 6): LED for vibration feedback.
+Code Explanation
+The following Arduino code controls the smart stick's functionality:
+
+Setup Function
+Initializes serial communication and sets pin modes for the ultrasonic sensor, buzzers, and LED.
+Loop Function
+Continuously measures distance using the ultrasonic sensor.
+Provides feedback based on distance:
+< 40 cm: LED turns on.
+< 20 cm: LED and active buzzer turn on.
+< 10 cm: LED, active buzzer, and passive buzzer turn on.
